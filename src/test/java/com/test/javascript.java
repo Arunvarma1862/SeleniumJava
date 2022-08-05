@@ -29,9 +29,18 @@ public class javascript {
 		 
 		// driver.get("https://www.hyrtutorials.com/");
 		   driver.get("https://github.com/login");
-		   generateAlert(driver,"this is my alert");
+		   Thread.sleep(2000);		   
+		   refreshBrowser(driver);
+		   
+		  /* WebElement login=driver.findElement(By.id("login_field"));
+		   drawBorder(login);
+		   
+		    String t=   getTitle(driver);
+		    System.out.println(t);*/
+		   
+	//	   generateAlert(driver,"this is my alert..");
          
-	//	 JavascriptExecutor jse= (JavascriptExecutor) driver;
+	//	    JavascriptExecutor jse= (JavascriptExecutor) driver;
 		 
 		 
 		 
@@ -44,7 +53,7 @@ public class javascript {
 	      ele.sendKeys("abcde");*/	
 		 
 		 
-		                                             //  enter text in to textbox
+		                                               //  enter text in to textbox
 	       
 		 
 //		 jse.executeScript(" document.getElementById('login_field').value='abcd';");
@@ -87,7 +96,9 @@ public class javascript {
 		 Thread.sleep(2000);
 		 driver.close();*/
 		 
-		                            //  zoom out
+		                                                 //  zoom out
+		   
+		   
 //		jse.executeScript("document.body.style.zoom='50%';");
 		
 		
@@ -108,11 +119,25 @@ public class javascript {
             {
            	    JavascriptExecutor jse= (JavascriptExecutor) driver;
            	    
-           	    
-           	    
-            	jse.executeScript("alert("+message+")");
+           	    jse.executeScript("alert(' "+message+" ')");
             }
+            public static void drawBorder( WebElement element) {
+                JavascriptExecutor jse= (JavascriptExecutor) driver;
+                jse.executeScript("arguments[0].style.border='2px red solid'",  element )  ;
+                
+                }
      
-     
+            public static String getTitle( WebDriver driver) {
+                JavascriptExecutor jse= (JavascriptExecutor) driver;
+                 String title   =  jse.executeScript("return document.title") .toString() ;
+               return title; 
+                }
+            public static void refreshBrowser(WebDriver driver) {
+                JavascriptExecutor jse= (JavascriptExecutor) driver;
+                jse.executeScript("history.go(0)")  ;
+                
+                }
+            
+   
     }
 

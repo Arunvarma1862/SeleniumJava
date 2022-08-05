@@ -1,13 +1,13 @@
 package com.test;
 
-import javax.sql.RowSet;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import  java.awt.Robot;
@@ -32,12 +32,13 @@ public class uploadFiles {
 	   
 	 	                                                   //  using send keys
 	   
-	 //  driver.findElement(By.id("file-upload")).sendKeys("C:\\New folder\\om.txt");*/
+	   //  driver.findElement(By.id("file-upload")).sendKeys("C:\\New folder\\om.txt");*/  
+	   //  if type=File attribute present use send keys
 	   
 	   
 	                                                    // using robot class methods
 	   
-	WebElement button=   driver.findElement(By.id("file-upload"));
+	WebElement button = driver.findElement(By.id("file-upload"));
 	JavascriptExecutor jse = (JavascriptExecutor) driver;
 	jse.executeScript("arguments[0].click();", button);
 	
