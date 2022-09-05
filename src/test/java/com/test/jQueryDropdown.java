@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -32,6 +31,7 @@ public class jQueryDropdown {
 
 	}
 	public static void selectdrop(WebDriver driver,String...value) {
+		
 		 List<WebElement> list= driver.findElements(By.xpath("//select[@id='ide']/option"));
 		 
 		 if(!value[0].equalsIgnoreCase("all"))
@@ -55,8 +55,7 @@ public class jQueryDropdown {
 			 for (WebElement item : list) 
 			 {
 				 item.click();
-				 
-				
+				 		
 			}
 		 }
 	}

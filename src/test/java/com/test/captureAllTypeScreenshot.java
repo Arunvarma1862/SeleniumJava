@@ -2,6 +2,7 @@ package com.test;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -11,6 +12,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -23,6 +26,7 @@ public class captureAllTypeScreenshot {
 		WebDriver driver= new EdgeDriver(options);
 
 		driver.get("https://demo.nopcommerce.com/desktops");
+		WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		//    	                             // screenshot full page
 
@@ -50,10 +54,11 @@ public class captureAllTypeScreenshot {
 		//          FileUtils.copyFile(src, dest);
 
 	                                         //  logo of webpage
-
+	
 		WebElement logo= driver.findElement(By.xpath("//a[text()='Twitter']"));
+		wait.until(ExpectedConditions.visibilityOf(logo));
 		File src =logo.getScreenshotAs(OutputType.FILE);
-        File dest= new File("./screenshot/img134.jpg");
+        File dest= new File("./screenshot/img13254.jpg");
 		FileUtils.copyFile(src, dest);
 		//  	  
 		driver.quit();

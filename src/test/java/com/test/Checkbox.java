@@ -14,6 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Checkbox {
   public static void main(String[] args) throws Exception {
+	  
 	WebDriverManager.chromedriver().setup();
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("Start-maximized");
@@ -60,6 +61,7 @@ public class Checkbox {
 	
 	/*for (WebElement Element : totalCheckBox) {
 		String checkBox=Element.getAttribute("id");
+		
 		if(checkBox.equals("ohrmList_chkSelectRecord_29")  || checkBox.equals("ohrmList_chkSelectRecord_42")) {
 			Element.click();
 			}

@@ -36,6 +36,7 @@ public class screenshot
 
 
 		//	                         //byte
+		
 		//	byte [] bytearr= driver.getScreenshotAs(OutputType.BYTES);
 		//	File destfile = new File("./screenshot/img2.jpg");
 		//	FileOutputStream fos = new FileOutputStream(destfile);
@@ -46,6 +47,7 @@ public class screenshot
 		//	
 
 		//	                           // base64
+		
 		//	String base64code =driver.getScreenshotAs(OutputType.BASE64);
 		//	byte [] bytearr= Base64.getDecoder().decode(base64code);
 		//	File destfile = new File("./screenshot/img3.jpg");

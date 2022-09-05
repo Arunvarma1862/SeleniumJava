@@ -30,8 +30,8 @@ public class checkdrop {
 	            List<WebElement>ele=  sec.getOptions();
 	            
 	            
-	            ArrayList originalList= new ArrayList();
-	            ArrayList templist= new ArrayList();
+	            ArrayList <String>originalList= new ArrayList<>();
+	            ArrayList<String> templist= new ArrayList<>();
 	
 	            for (WebElement eles : ele)
 	            {
